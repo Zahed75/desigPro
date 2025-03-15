@@ -25,14 +25,12 @@ export class LayoutComponent implements OnInit {
   isCollapsed = false;
 
   isActive(route: string): boolean {
-
-    return route === '/overview';
+    return route === '/overview'; // Simulate "Overview" as active
   }
 
   toggleDemoMode(event: Event) {
     const checkbox = event.target as HTMLInputElement;
     console.log('Demo Mode:', checkbox.checked);
-    // Add your logic for demo mode toggle here
   }
 
   toggleCollapse() {

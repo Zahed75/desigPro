@@ -2,112 +2,71 @@
   <!-- Sidenav -->
   <aside class="w-64 bg-white shadow-lg transition-all duration-300" [ngClass]="{'w-16': isCollapsed, 'w-64': !isCollapsed}">
     <div class="p-5 border-b border-gray-200">
-      <div class="flex items-center space-x-2">
-        <span class="text-xl font-bold text-green-700">DesignPro</span>
-      </div>
+      <span class="text-xl font-bold text-green-700">DesignPro</span>
     </div>
     <nav class="mt-4">
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/overview')"
-        [class.text-green-800]="isActive('/overview')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/overview')" [class.text-green-800]="isActive('/overview')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">📊</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Overview</span>
       </a>
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/performance')"
-        [class.text-green-800]="isActive('/performance')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/performance')" [class.text-green-800]="isActive('/performance')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">⏩</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Performance</span>
       </a>
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/campaigns')"
-        [class.text-green-800]="isActive('/campaigns')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/campaigns')" [class.text-green-800]="isActive('/campaigns')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">📣</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Campaigns</span>
       </a>
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/orders')"
-        [class.text-green-800]="isActive('/orders')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/orders')" [class.text-green-800]="isActive('/orders')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">🗳️</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Orders</span>
       </a>
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/products')"
-        [class.text-green-800]="isActive('/products')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/products')" [class.text-green-800]="isActive('/products')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">📦</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Products</span>
       </a>
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/message')"
-        [class.text-green-800]="isActive('/message')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/message')" [class.text-green-800]="isActive('/message')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">💬</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Message</span>
       </a>
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/sales-platform')"
-        [class.text-green-800]="isActive('/sales-platform')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/sales-platform')" [class.text-green-800]="isActive('/sales-platform')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">🏪</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Sales Platform</span>
       </a>
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/demo')"
-        [class.text-green-800]="isActive('/demo')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/demo')" [class.text-green-800]="isActive('/demo')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">🎮</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Demo Mode</span>
         <label class="relative inline-flex items-center cursor-pointer ml-auto" [ngClass]="{'ml-0': isCollapsed}">
-          <input type="checkbox" value="" class="sr-only peer" (change)="toggleDemoMode($event)">
-          <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-[18px] peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-green-600"></div>
+          <input type="checkbox" class="sr-only peer" (change)="toggleDemoMode($event)">
+          <div class="w-9 h-5 bg-gray-200 rounded-full peer-checked:bg-green-600 peer-checked:after:translate-x-[18px] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
         </label>
       </a>
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/feedback')"
-        [class.text-green-800]="isActive('/feedback')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/feedback')" [class.text-green-800]="isActive('/feedback')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">💡</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Feedback</span>
       </a>
-      <a
-        href="#"
-        class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors duration-200"
-        [class.bg-green-100]="isActive('/help')"
-        [class.text-green-800]="isActive('/help')"
-        [ngClass]="{'justify-center': isCollapsed}"
-      >
+      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
+         [class.bg-green-100]="isActive('/help')" [class.text-green-800]="isActive('/help')"
+         [ngClass]="{'justify-center': isCollapsed}">
         <span class="mr-2 text-lg">❓</span>
         <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Help and docs</span>
       </a>
@@ -117,42 +76,25 @@
     </button>
   </aside>
 
-
-
   <!-- Header -->
   <div class="flex-1 flex flex-col">
-    <header class="bg-white shadow-md h-16 px-5 flex justify-between items-center border-b border-gray-200">
+    <header class="bg-white shadow-md h-16 px-5 flex justify-between items-center border-b">
       <div class="relative w-1/3 md:w-1/4">
-        <input
-          type="text"
-          placeholder="Search anything here..."
-          class="w-full pl-10 pr-4 py-1.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-transparent transition duration-200 text-sm"
-        />
+        <input type="text" placeholder="Search anything here..." class="w-full pl-10 pr-4 py-1.5 border rounded-lg focus:ring-1 focus:ring-green-500 focus:border-transparent text-sm" />
         <span class="absolute left-3 top-2 text-gray-400 text-base">🔍</span>
       </div>
       <div class="flex items-center space-x-4">
-        <button
-          class="text-gray-600 hover:text-green-800 transition-colors duration-200 relative group"
-          title="Download"
-        >
+        <button class="text-gray-600 hover:text-green-800 transition-colors" title="Download">
           <span class="text-xl">↓</span>
-          <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap">Download</span>
         </button>
-        <button
-          class="text-gray-600 hover:text-green-800 transition-colors duration-200 relative group"
-          title="Settings"
-        >
+        <button class="text-gray-600 hover:text-green-800 transition-colors" title="Settings">
           <span class="text-xl">⚙️</span>
-          <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap">Settings</span>
         </button>
-        <div class="relative group">
-          <button
-            class="text-gray-600 hover:text-green-800 transition-colors duration-200"
-            title="Profile"
-          >
-            <img src="https://via.placeholder.com/24" alt="Avatar" class="w-6 h-6 rounded-full object-cover">
+        <div class="relative">
+          <button class="text-gray-600 hover:text-green-800 transition-colors">
+            <img src="https://via.placeholder.com/24" alt="Avatar" class="w-6 h-6 rounded-full">
           </button>
-          <div class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg hidden group-hover:block">
+          <div class="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg hidden group-hover:block">
             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-800">Profile</a>
             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-800">Logout</a>
           </div>
@@ -160,7 +102,7 @@
       </div>
     </header>
 
-    <!-- Main content will go here (skipped as per request) -->
+    <!-- Main content -->
     <main class="flex-1 p-6">
       <!-- Add your main content here if needed later -->
     </main>

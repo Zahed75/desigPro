@@ -1,26 +1,61 @@
-/* Custom styles for a professional look */
+/* Custom styles to match the screenshot exactly */
 nav a {
-  font-size: 1rem;
+  font-size: 0.875rem; /* 14px */
   font-weight: 500;
 }
 
-nav a.active {
+nav a.bg-green-100 {
   background-color: #e0f2e9;
   color: #047857;
   font-weight: 600;
 }
 
 nav a:hover {
-  border-left: 4px solid #047857;
-  padding-left: 2px;
+  background-color: #f7fafc;
+  color: #047857;
 }
 
 header input {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Remove any transformations on hover */
 header button:hover span {
-  transform: scale(1.1);
+  transform: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  aside.w-64 {
+    transform: translateX(0);
+  }
+
+  .md\\:hidden {
+    display: block;
+  }
+
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Remove the invalid selector */
+  header > div:first-child {
+    width: 100%;
+  }
+
+  .profile-dropdown {
+    z-index: 50;
+  }
 }
 
 /* Ensure the profile dropdown stays within bounds */

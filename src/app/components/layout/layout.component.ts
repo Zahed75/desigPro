@@ -1,9 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterLink} from '@angular/router';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-layout',
   imports: [
+    NgClass
 
   ],
   templateUrl: './layout.component.html',
@@ -20,17 +22,21 @@ export class LayoutComponent implements OnInit {
 
   }
 
+  isCollapsed = false;
 
   isActive(route: string): boolean {
 
-    return false;
+    return route === '/overview';
   }
 
   toggleDemoMode(event: Event) {
     const checkbox = event.target as HTMLInputElement;
     console.log('Demo Mode:', checkbox.checked);
-
+    // Add your logic for demo mode toggle here
   }
 
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 
 }

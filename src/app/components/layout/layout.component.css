@@ -1,0 +1,29 @@
+/* Custom styles for a professional look */
+nav a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav a.active {
+  background-color: #e0f2e9;
+  color: #047857;
+  font-weight: 600;
+}
+
+nav a:hover {
+  border-left: 4px solid #047857;
+  padding-left: 2px;
+}
+
+header input {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+header button:hover span {
+  transform: scale(1.1);
+}
+
+/* Ensure the profile dropdown stays within bounds */
+.profile-dropdown {
+  z-index: 50;
+}

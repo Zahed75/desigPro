@@ -5,6 +5,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import {ForgetPassComponent} from './components/forget-pass/forget-pass.component';
+import {OtpVerificationComponent} from './components/otp-verification/otp-verification.component';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,10 @@ export const routes: Routes = [
   {
     path:'forgot-password',
     component:ForgetPassComponent
+  },
+  {
+    path:'otp-verify',
+    component:OtpVerificationComponent
   },
   {
     path: 'layout',

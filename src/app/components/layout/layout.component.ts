@@ -22,19 +22,10 @@ export class LayoutComponent implements OnInit {
 
   }
 
-  isCollapsed = false;
+  isSidebarOpen = false;
 
-  isActive(route: string): boolean {
-    return route === '/overview'; // Simulate "Overview" as active
-  }
-
-  toggleDemoMode(event: Event) {
-    const checkbox = event.target as HTMLInputElement;
-    console.log('Demo Mode:', checkbox.checked);
-  }
-
-  toggleCollapse() {
-    this.isCollapsed = !this.isCollapsed;
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
   }
 
 }

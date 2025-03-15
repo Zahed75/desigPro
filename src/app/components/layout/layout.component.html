@@ -1,110 +1,151 @@
-<div class="flex h-screen bg-gray-50 font-sans">
-  <!-- Sidenav -->
-  <aside class="w-64 bg-white shadow-lg transition-all duration-300" [ngClass]="{'w-16': isCollapsed, 'w-64': !isCollapsed}">
-    <div class="p-5 border-b border-gray-200">
-      <span class="text-xl font-bold text-green-700">DesignPro</span>
-    </div>
-    <nav class="mt-4">
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/overview')" [class.text-green-800]="isActive('/overview')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">📊</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Overview</span>
-      </a>
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/performance')" [class.text-green-800]="isActive('/performance')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">⏩</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Performance</span>
-      </a>
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/campaigns')" [class.text-green-800]="isActive('/campaigns')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">📣</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Campaigns</span>
-      </a>
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/orders')" [class.text-green-800]="isActive('/orders')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">🗳️</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Orders</span>
-      </a>
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/products')" [class.text-green-800]="isActive('/products')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">📦</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Products</span>
-      </a>
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/message')" [class.text-green-800]="isActive('/message')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">💬</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Message</span>
-      </a>
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/sales-platform')" [class.text-green-800]="isActive('/sales-platform')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">🏪</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Sales Platform</span>
-      </a>
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/demo')" [class.text-green-800]="isActive('/demo')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">🎮</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Demo Mode</span>
-        <label class="relative inline-flex items-center cursor-pointer ml-auto" [ngClass]="{'ml-0': isCollapsed}">
-          <input type="checkbox" class="sr-only peer" (change)="toggleDemoMode($event)">
-          <div class="w-9 h-5 bg-gray-200 rounded-full peer-checked:bg-green-600 peer-checked:after:translate-x-[18px] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
-        </label>
-      </a>
-
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/feedback')" [class.text-green-800]="isActive('/feedback')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">💡</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Feedback</span>
-      </a>
-      <a href="#" class="flex items-center px-5 py-2 text-gray-600 hover:bg-gray-100 hover:text-green-800 transition-colors"
-         [class.bg-green-100]="isActive('/help')" [class.text-green-800]="isActive('/help')"
-         [ngClass]="{'justify-center': isCollapsed}">
-        <span class="mr-2 text-lg">❓</span>
-        <span class="truncate text-sm font-medium" [ngClass]="{'hidden': isCollapsed}">Help and docs</span>
-      </a>
-    </nav>
-    <button (click)="toggleCollapse()" class="absolute top-4 right-4 md:hidden text-gray-600 hover:text-green-700">
-      <span class="text-2xl">☰</span>
-    </button>
-  </aside>
-
-  <!-- Header -->
-  <div class="flex-1 flex flex-col">
-    <header class="bg-white shadow-md h-16 px-5 flex justify-between items-center border-b">
-      <div class="relative w-1/3 md:w-1/4">
-        <input type="text" placeholder="Search anything here..." class="w-full pl-10 pr-4 py-1.5 border rounded-lg focus:ring-1 focus:ring-green-500 focus:border-transparent text-sm" />
-        <span class="absolute left-3 top-2 text-gray-400 text-base">🔍</span>
+<!-- layout.component.html -->
+<div class="min-h-screen flex flex-col">
+  <!-- Main Wrapper -->
+  <div class="flex flex-1">
+    <!-- Sidebar (Sidenav) -->
+    <aside
+      class="fixed inset-y-0 left-0 w-64 bg-gray-100 text-gray-700 flex flex-col transform transition-transform duration-300 ease-in-out z-20 lg:static lg:transform-none"
+      [ngClass]="{'-translate-x-full': !isSidebarOpen, 'translate-x-0': isSidebarOpen}"
+    >
+      <!-- Logo -->
+      <div class="p-4 flex items-center justify-between">
+        <h1 class="text-2xl font-bold">DesignPro</h1>
+        <!-- Close Button (Visible on Mobile) -->
+        <button class="lg:hidden" (click)="toggleSidebar()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
-      <div class="flex items-center space-x-4">
-        <button class="text-gray-600 hover:text-green-800 transition-colors" title="Download">
-          <span class="text-xl">↓</span>
+      <!-- Navigation -->
+      <nav class="flex-1 px-2 py-4">
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-200">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-200">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 2H4v10h12V5z" />
+              </svg>
+              Finances
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-200">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1V8a1 1 0 00-1-1h-1V6a4 4 0 00-4-4zm0 2a2 2 0 012 2v1H8V6a2 2 0 012-2z" />
+              </svg>
+              Platforms
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-200">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm2 2v10h12V5H4z" />
+              </svg>
+              Config & Fees
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-200">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm0 2h8v12H6V4z" />
+              </svg>
+              Analytics
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-200">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 2H4v10h12V5z" />
+              </svg>
+              Statements
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 rounded-lg bg-gray-200">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1V8a1 1 0 00-1-1h-1V6a4 4 0 00-4-4zm0 2a2 2 0 012 2v1H8V6a2 2 0 012-2z" />
+              </svg>
+              Billing
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-200">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M8 3a1 1 0 00-1 1v1H5a2 2 0 00-2 2v8a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2V4a1 1 0 00-1-1H8z" />
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-200">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 7a1 1 0 011 1v4a1 1 0 01-2 0V8a1 1 0 011-1zm-6 0a1 1 0 011 1v4a1 1 0 01-2 0V8a1 1 0 011-1z" />
+              </svg>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Overlay (Visible on Mobile when Sidebar is Open) -->
+    <div
+      class="fixed inset-0 bg-black bg-opacity-50 z-10 lg:hidden"
+      [ngClass]="{'block': isSidebarOpen, 'hidden': !isSidebarOpen}"
+      (click)="toggleSidebar()"
+    ></div>
+
+    <!-- Main Content Wrapper -->
+    <div class="flex-1 lg:ml-64">
+      <!-- Header -->
+      <header class="bg-white shadow-sm p-4 flex justify-between items-center">
+        <!-- Hamburger Menu (Visible on Mobile) -->
+        <button class="lg:hidden" (click)="toggleSidebar()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
         </button>
-        <button class="text-gray-600 hover:text-green-800 transition-colors" title="Settings">
-          <span class="text-xl">⚙️</span>
-        </button>
-        <div class="relative">
-          <button class="text-gray-600 hover:text-green-800 transition-colors">
-            <img src="https://via.placeholder.com/24" alt="Avatar" class="w-6 h-6 rounded-full">
-          </button>
-          <div class="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg hidden group-hover:block">
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-800">Profile</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-800">Logout</a>
+        <!-- Title -->
+        <h2 class="text-xl font-semibold hidden lg:block">Dashboard</h2>
+        <!-- Right Section -->
+        <div class="flex items-center space-x-2 lg:space-x-4">
+          <!-- Tabs (Hidden on Mobile, Visible on Larger Screens) -->
+          <div class="hidden lg:flex space-x-2">
+            <button class="px-4 py-2 bg-gray-100 rounded-lg">Overview</button>
+            <button class="px-4 py-2 hover:bg-gray-100 rounded-lg">Merchants</button>
+            <button class="px-4 py-2 hover:bg-gray-100 rounded-lg">Transactions</button>
+            <button class="px-4 py-2 hover:bg-gray-100 rounded-lg">Finances</button>
+          </div>
+          <!-- Search and Profile -->
+          <div class="flex items-center space-x-2">
+            <!-- Search Bar (Hidden on Mobile, Visible on Larger Screens) -->
+            <div class="hidden lg:flex items-center">
+              <input type="text" placeholder="Search" class="px-3 py-2 border rounded-lg">
+              <button class="p-2">
+                <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 6a4 4 0 100 8 4 4 0 000-8zM2 10a8 8 0 1114.32 4.906l2.387 2.386a1 1 0 01-1.414 1.414l-2.386-2.387A8 8 0 012 10z" />
+                </svg>
+              </button>
+            </div>
+            <!-- Search Icon (Visible on Mobile) -->
+            <button class="lg:hidden p-2">
+              <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 6a4 4 0 100 8 4 4 0 000-8zM2 10a8 8 0 1114.32 4.906l2.387 2.386a1 1 0 01-1.414 1.414l-2.386-2.387A8 8 0 012 10z" />
+              </svg>
+            </button>
+            <!-- Profile -->
+            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
           </div>
         </div>
-      </div>
-    </header>
-
-    <!-- Main content -->
-    <main class="flex-1 p-6">
-      <!-- Add your main content here if needed later -->
-    </main>
+      </header>
+    </div>
   </div>
 </div>

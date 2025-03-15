@@ -1,14 +1,14 @@
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideHttpClient } from '@angular/common/http';
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { routes } from './app.routes';
-import { AngularSvgIconModule, SvgIconRegistryService } from 'angular-svg-icon';
+import { httpInterceptor } from './interceptor/core/http.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideHttpClient(),
+    provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    SvgIconRegistryService, // Provide the service globally
-    importProvidersFrom(AngularSvgIconModule.forRoot()) // Import the SVG module globally
-  ]
+    provideHttpClient(withInterceptors([httpInterceptor])),
+
+  ],
 };

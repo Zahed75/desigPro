@@ -13,7 +13,7 @@ import {NgClass} from '@angular/common';
 })
 export class LayoutComponent implements OnInit {
 
-  isOpenProfile=false;
+  isSidebarOpen = false;
 
   constructor() {
   }
@@ -22,7 +22,7 @@ export class LayoutComponent implements OnInit {
 
   }
 
-  isSidebarOpen = false;
+
 
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;

@@ -1,13 +1,14 @@
 import { Routes } from '@angular/router';
 import { AuthComponent } from './components/auth/auth.component';
-import { authGuard } from './guard/auth.guard';
 import { LayoutComponent } from './components/layout/layout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import {ForgetPassComponent} from './components/forget-pass/forget-pass.component';
-import {OtpVerificationComponent} from './components/otp-verification/otp-verification.component';
+import { ForgetPassComponent } from './components/forget-pass/forget-pass.component';
+import { OtpVerificationComponent } from './components/otp-verification/otp-verification.component';
+import { BrandsComponent } from './components/brands/brands.component';
 
 export const routes: Routes = [
+
   {
     path: '',
     redirectTo: 'sign-in',
@@ -15,33 +16,34 @@ export const routes: Routes = [
   },
   {
     path: 'sign-up',
-    component: SignUpComponent
+    component: SignUpComponent,
+  },
+  {
+    path: 'forgot-password',
+    component: ForgetPassComponent,
+  },
+  {
+    path: 'otp-verify',
+    component: OtpVerificationComponent,
   },
   {
     path: 'sign-in',
     component: AuthComponent,
   },
   {
-    path:'forgot-password',
-    component:ForgetPassComponent
+    path: 'dashboard',
+    component: DashboardComponent,
   },
   {
-    path:'otp-verify',
-    component:OtpVerificationComponent
+    path: 'brand',
+    component: BrandsComponent,
   },
   {
     path: 'layout',
     component: LayoutComponent,
     children: [
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      }
-    ]
+
+    ],
   },
-  // Move wildcard route outside layout
-  {
-    path: '**',
-    redirectTo: 'sign-in',
-  }
 ];
+

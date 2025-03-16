@@ -1,0 +1,158 @@
+<div class="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-3xl mx-auto">
+    <!-- Heading -->
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Create Your Brand</h1>
+
+    <!-- Form -->
+    <form class="space-y-6">
+      <!-- Brand Name -->
+      <div>
+        <label for="brand-name" class="block text-sm font-medium text-gray-700">Brand Name</label>
+        <input
+          type="text"
+          id="brand-name"
+          name="brand-name"
+          placeholder="Enter your brand name"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          required
+        />
+      </div>
+
+      <!-- Brand Description -->
+      <div>
+        <label for="brand-description" class="block text-sm font-medium text-gray-700">Brand Description</label>
+        <textarea
+          id="brand-description"
+          name="brand-description"
+          rows="4"
+          placeholder="Describe your brand"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          required
+        ></textarea>
+      </div>
+
+      <!-- Website URL -->
+      <div>
+        <label for="website" class="block text-sm font-medium text-gray-700">Website URL</label>
+        <input
+          type="url"
+          id="website"
+          name="website"
+          placeholder="https://example.com"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          required
+        />
+      </div>
+
+      <!-- Brand Colors -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Brand Colors</label>
+        <div class="mt-1 grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <!-- Primary Color -->
+          <div>
+            <label for="primary-color" class="block text-xs text-gray-500">Primary Color</label>
+            <input
+              type="color"
+              id="primary-color"
+              name="primary-color"
+              class="mt-1 block w-full h-10 rounded-lg shadow-sm"
+              required
+            />
+          </div>
+          <!-- Secondary Color -->
+          <div>
+            <label for="secondary-color" class="block text-xs text-gray-500">Secondary Color</label>
+            <input
+              type="color"
+              id="secondary-color"
+              name="secondary-color"
+              class="mt-1 block w-full h-10 rounded-lg shadow-sm"
+              required
+            />
+          </div>
+          <!-- Accent Color -->
+          <div>
+            <label for="accent-color" class="block text-xs text-gray-500">Accent Color</label>
+            <input
+              type="color"
+              id="accent-color"
+              name="accent-color"
+              class="mt-1 block w-full h-10 rounded-lg shadow-sm"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo Upload -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Logo</label>
+        <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg">
+          <div class="space-y-1 text-center">
+            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="flex text-sm text-gray-600">
+              <label for="logo-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                <span>Upload a file</span>
+                <input id="logo-upload" name="logo-upload" type="file" class="sr-only" />
+              </label>
+              <p class="pl-1">or drag and drop</p>
+            </div>
+            <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Guidelines Upload -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Brand Guidelines</label>
+        <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg">
+          <div class="space-y-1 text-center">
+            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="flex text-sm text-gray-600">
+              <label for="guidelines-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                <span>Upload a file</span>
+                <input id="guidelines-upload" name="guidelines-upload" type="file" class="sr-only" />
+              </label>
+              <p class="pl-1">or drag and drop</p>
+            </div>
+            <p class="text-xs text-gray-500">PDF up to 10MB</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fonts Upload -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Fonts</label>
+        <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg">
+          <div class="space-y-1 text-center">
+            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="flex text-sm text-gray-600">
+              <label for="fonts-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                <span>Upload a file</span>
+                <input id="fonts-upload" name="fonts-upload" type="file" class="sr-only" />
+              </label>
+              <p class="pl-1">or drag and drop</p>
+            </div>
+            <p class="text-xs text-gray-500">TTF, OTF up to 10MB</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button
+          type="submit"
+          class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          Create Brand
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

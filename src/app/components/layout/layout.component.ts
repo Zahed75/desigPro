@@ -1,31 +1,32 @@
-import {Component, OnInit} from '@angular/core';
-import {RouterLink} from '@angular/router';
-import {NgClass} from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-layout',
   imports: [
-    NgClass
-
+    RouterLink
   ],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
+  styleUrls: ['./layout.component.css'],
 })
 export class LayoutComponent implements OnInit {
-
-  isSidebarOpen = false;
-
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
-
+    initFlowbite();
   }
 
 
+  ngAfterViewInit() {
+    const profileButton = document.getElementById('profile-dropdown-button');
+    const profileDropdown = document.getElementById('profile-dropdown');
 
-  toggleSidebar() {
-    this.isSidebarOpen = !this.isSidebarOpen;
+    if (profileButton && profileDropdown) {
+      profileButton.addEventListener('click', () => {
+        profileDropdown.classList.toggle('hidden');
+      });
+    }
   }
 
 }
